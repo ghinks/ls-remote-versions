@@ -1,5 +1,5 @@
 {
-  "name": "mod-dep-mod",
+  "name": "ls-remote-versions",
   "version": "0.0.1",
   "description": "",
   "bin": "bin/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ghinks/mod-dep-mod.git"
+    "url": "https://github.com/ghinks/ls-remote-versions.git"
   },
   "keywords": [
     "ls",
@@ -41,7 +41,6 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "jest": "^22.4.3",
-    "mocha": "^5.0.1",
     "nock": "^9.2.1",
     "nodemon": "^1.15.1",
     "nyc": "^11.4.1",
@@ -64,7 +63,7 @@
         "env",
         {
           "targets": {
-            "node": "9.0.0"
+            "node": "6.0.0"
           }
         }
       ],
