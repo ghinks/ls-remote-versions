@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var argv = require('minimist')(process.argv.slice(2))
-var getPackageVersions = require('../lib')
+var getPackageVersions = require('../lib/index').default
 
 if (argv._.length === 0) {
   console.log('no args given')
@@ -9,5 +9,10 @@ if (argv._.length === 0) {
   process.exit()
 }
 
-const versions = getPackageVersions(argv._[0], argv._[1])
-console.log(versions)
+getPackageVersions(argv._[0], argv._[1])
+  .then(versions => {
+    versions.forEach(function (v) {
+      console.log(v)
+    })
+  })
+  .catch(err => console.log(err.message))

@@ -1,12 +1,6 @@
 import fetch from 'isomorphic-fetch'
-
-/*
 import registryUrl from 'registry-url'
 import npa from 'npm-package-arg'
-*/
-
-const registryUrl = () => null
-const npa = () => null
 
 const action = async (packageName) => {
   const escapedName = npa(packageName).escapedName
