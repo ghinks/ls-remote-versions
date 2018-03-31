@@ -19,6 +19,17 @@ will list all of the versions of express in your registry
 ls-remote-versions express 4
 ```
 
+```
+ls-remote-versions express 4\.15
+express
+4.15.0
+4.15.1
+4.15.2
+4.15.3
+4.15.4
+4.15.5
+```
+
 will list all of the versions of express in your registry that match the expression 4
 
 ( The second argument is used to form a RegExp so escape it if you use periods )
