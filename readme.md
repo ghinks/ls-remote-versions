@@ -36,8 +36,17 @@ will list all of the versions of express in your registry that match the express
 
 
 ```
-ls-remote-versions express 4\.1\.\d
+ls-remote-versions debug '2\.\d+\.\d+'
 ```
+
+This may be used as part of a program
+
+```
+const ls = require('ls-remote-versions').default;
+
+ls('debug', '2').then(result => console.log(result));
+```
+
 
 ## features
 
@@ -45,3 +54,4 @@ ls-remote-versions express 4\.1\.\d
 - great for corporate use behind the firewall
 - takes regex as second arg to enable registry searches
 - use the registry as defined in **npm config get registry**
+- can be required in a program
