@@ -1,8 +1,9 @@
 {
   "name": "ls-remote-versions",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "bin": "bin/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib --ignore test.js",
     "watch": "babel --watch src --out-dir lib --ignore test.js",
