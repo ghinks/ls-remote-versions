@@ -9,7 +9,8 @@ const matchVersion = (versions, range) => {
     }
     return acc
   }, [])
-  return matches
+  const ordered = matches.sort(semver.compare)
+  return ordered
 }
 
 const getPackageVersions = async (module, range) => {
