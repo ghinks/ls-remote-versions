@@ -20,7 +20,6 @@ describe('fetch versions', () => {
   const mockNpa = () => ({
     escapedName: testModule
   })
-  const mockRegistryUrl = () => testRegistry
 
   beforeEach(() => {
     httpMock = nock(/.*/)
@@ -28,7 +27,6 @@ describe('fetch versions', () => {
       .reply(200, mockData)
 
     actionRewireAPI.__Rewire__('npa', mockNpa)
-    actionRewireAPI.__Rewire__('registryUrl', mockRegistryUrl)
   })
 
   afterEach(() => {
@@ -38,7 +36,7 @@ describe('fetch versions', () => {
 
   test('mocking test', async () => {
     expect.assertions(1)
-    const result = await action(testModule)
+    const result = await action(testModule, testRegistry)
     expect(result).toBeDefined()
     httpMock.isDone()
   })
