@@ -14,19 +14,30 @@ npm install ls-remote-versions
 ## usage
 
 ```
+ls-remote-versions <package-name>
+```
+
+example
+
+
+```
 ls-remote-versions express
 ```
 
 will list all of the versions of express in your registry satisfying the semver range as implemented in [semver](https://www.npmjs.com/package/semver)
 
+
+example
 ```
 ls-remote-versions express 4
 ```
 
+example
 ```
 ls-remote-versions express '4.0.x'
 ```
 
+example
 ```
 ls-remote-versions express '4 - 5'
 express
@@ -49,6 +60,19 @@ const ls = require('ls-remote-versions').default;
 ls('debug', '2').then(result => console.log(result));
 ```
 
+### Advanced usage to diff registries
+
+```
+ls-remote-versions <package-name> -r otherRegistryUrl
+```
+
+example
+```
+ls-remote-versions node-sass -r http://localhost:4873
+```
+
+This will log out all the registry and diff versions in the alternate registry.
+In this case a local registry hosted using [verdaccio](https://www.npmjs.com/package/verdaccio)
 
 ## features
 
