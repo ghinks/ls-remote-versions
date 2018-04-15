@@ -74,6 +74,11 @@ ls-remote-versions node-sass -r http://localhost:4873
 This will log out all the registry and diff versions in the alternate registry.
 In this case a local registry hosted using [verdaccio](https://www.npmjs.com/package/verdaccio)
 
+
+<p align="center">
+	<img src="https://cdn.rawgit.com/ghinks/ls-remote-versions/feature/lsr-alt-reg-gif/lsr-alt-registry.gif">
+</p>
+
 ## features
 
 - tested on node 4 onwards
