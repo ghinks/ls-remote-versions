@@ -4,7 +4,7 @@ A tool to list the versions available on your registry by semver range. Great fo
 the versions that the public registry has.
 
 <p align="center">
-	<img src="https://cdn.rawgit.com/ghinks/ls-remote-versions/d87b6009/lsr2.gif" width="500">
+	<img src="https://cdn.rawgit.com/ghinks/ls-remote-versions/feature/add-gif-lsr4/ls-remote-versions.gif">
 </p>
 
 ## installation
