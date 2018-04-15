@@ -23,7 +23,6 @@ const getVersions = async (module, range, registry) => {
 }
 
 const getPackageVersions = async (module, range, alternateRegistry) => {
-  console.log(`${module}, ${range}, ${registryUrl()}, ${alternateRegistry}`)
   const mainRegVers = await getVersions(module, range, registryUrl())
   if (!alternateRegistry) {
     return {

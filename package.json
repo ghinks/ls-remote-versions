@@ -1,6 +1,6 @@
 {
   "name": "ls-remote-versions",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "",
   "bin": "bin/index.js",
   "main": "lib/index.js",
@@ -32,7 +32,6 @@
     "minimist": "^1.2.0",
     "npm-package-arg": "^6.0.0",
     "registry-url": "^3.1.0",
-    "request-promise": "^4.2.2",
     "semver": "5.3.0"
   },
   "devDependencies": {
