@@ -9,7 +9,7 @@ the versions that the public registry has.
 
 ## installation
 
-npm install ls-remote-versions
+npm install -g ls-remote-versions
 
 ## usage
 
