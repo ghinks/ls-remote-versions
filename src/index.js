@@ -18,7 +18,7 @@ const matchVersion = (versions, range) => {
 const getVersions = async (module, range, registry) => {
   const packageInfo = await fetchVersions(module, registry)
   const versions = parseVersions(packageInfo.versions)
-  if (!range) return versions
+  if (!range) return versions.sort(semver.compare)
   return matchVersion(versions, range)
 }
 
