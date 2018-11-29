@@ -1,4 +1,4 @@
-import action, {__RewireAPI__ as actionRewireAPI} from './index'
+import action, { __RewireAPI__ as actionRewireAPI } from './index'
 import nock from 'nock'
 import util from 'util'
 import fs from 'fs'
