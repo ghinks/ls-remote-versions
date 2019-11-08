@@ -3,9 +3,8 @@ os:
   - osx
   - linux
 node_js:
-  - 8
-  - 10
   - 12
+  - 13
 cache: npm
 install:
   - npm install
