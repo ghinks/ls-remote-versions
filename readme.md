@@ -1,5 +1,7 @@
 # ls-remote-versions
 
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+
 A tool to list the versions available on your registry by semver range. Great for all those **behind the firewall** as you may not have all
 the versions that the public registry has.
 
