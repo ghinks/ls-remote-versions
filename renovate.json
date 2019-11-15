@@ -6,11 +6,6 @@
     "enabled": true,
     "supportPolicy": ["lts_latest", "current"]
   },
-  "npm": {
-    "engines": {
-      "node": ">=8.0.0"
-    }
-  },
   "bumpVersion": "minor",
   "schedule": "before 3am"
 }
