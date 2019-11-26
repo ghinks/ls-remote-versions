@@ -1,2 +1,2 @@
 version: 1.0
-import: ljharb/travis-ci:node/majors/LTS-active.yaml
+import: ljharb/travis-ci:node/majors/LTS-active.yml
