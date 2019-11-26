@@ -3,4 +3,4 @@ import:
   - source: ljharb/travis-ci:node/majors/LTS-active.yml
     mode: deep_merge_append
   - source: .other_travis_configs.yml
-    mode: deep_merge_append
+    mode: replace
