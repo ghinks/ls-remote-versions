@@ -1,14 +1,2 @@
-language: node_js
-os:
-  - osx
-  - linux
-node_js:
-  - 12
-  - 13
-cache: npm
-install:
-  - npm install
-script:
-  - npm run lint
-  - npm run test
-  - npm run build
+version: 1.0
+import ljharb/travis-ci/node/majors:LTS-active.yaml
