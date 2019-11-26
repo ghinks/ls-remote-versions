@@ -1,2 +1,6 @@
 version: 1.0
-import: ljharb/travis-ci:node/majors/LTS-active.yml
+import:
+  - source: ljharb/travis-ci:node/majors/LTS-active.yml
+    mode: deep_merge_append
+  - source: .other_travis_configs.yml
+    mode: deep_merge_append
