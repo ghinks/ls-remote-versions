@@ -1,5 +1,8 @@
 version: ~> 1.0
+script:
+  - npm run lint
+  - npm run test
+  - npm run build
 import:
   - source: ljharb/travis-ci:node/majors/LTS-active.yml
-  - source: .other_travis_configs.yml
     mode: deep_merge
