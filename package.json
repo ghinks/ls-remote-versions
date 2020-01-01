@@ -9,7 +9,7 @@
     "watch": "babel --watch src --out-dir lib --ignore test.js",
     "lint": "standard --env jest src/**/*.js",
     "tests-only": "jest src/**/test.js",
-    "test": "jest --coverage src/**/test.js"
+    "coverage": "jest --coverage src/**/test.js"
   },
   "engines": {
     "node": ">=8.0.0"
