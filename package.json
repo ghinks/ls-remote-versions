@@ -1,6 +1,6 @@
 {
   "name": "ls-remote-versions",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
   "bin": "bin/index.js",
   "main": "lib/index.js",
@@ -32,7 +32,7 @@
     "minimist": "^1.2.0",
     "npm-package-arg": "^7.0.0",
     "registry-url": "^5.0.0",
-    "semver": "6.3.0"
+    "semver": "7.1.1"
   },
   "devDependencies": {
     "@babel/cli": "7.7.4",
