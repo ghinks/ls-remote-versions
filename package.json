@@ -31,7 +31,7 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
-    "npm-package-arg": "^7.0.0",
+    "npm-package-arg": "^8.0.0",
     "registry-url": "^5.0.0",
     "semver": "7.1.1"
   },
