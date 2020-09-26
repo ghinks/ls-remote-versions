@@ -1,6 +1,6 @@
 {
   "name": "ls-remote-versions",
-  "version": "1.4.20",
+  "version": "1.4.21",
   "description": "",
   "bin": "bin/index.js",
   "main": "lib/index.js",
