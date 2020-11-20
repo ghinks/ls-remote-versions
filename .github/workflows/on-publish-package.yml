@@ -1,8 +1,8 @@
 name: on-publish-package
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+    pull_request: [ main ]
   workflow_dispatch:
 jobs:
   build:
