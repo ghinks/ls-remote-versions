@@ -1,0 +1,47 @@
+name: on-publish-package
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      ##################################################
+      #
+      # code checkout and node setup, this uses 2 actions
+      # from the market place
+      #
+      ##################################################
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: setup-node-path
+        run: echo '::add-path::./node_modules/.bin'
+      ##################################################
+      #   _           _ _     _
+      #  | |__  _   _(_) | __| |
+      #  | '_ \| | | | | |/ _` |
+      #  | |_) | |_| | | | (_| |
+      #  |_.__/ \__,_|_|_|\__,_|
+      ##################################################
+
+      ##################################################
+      #
+      # regular use of npm install command
+      #
+      ##################################################
+      - name: npm-install
+        run: npm ci
+      ##################################################
+      #
+      # lerna bootstrap simply installs all the packages
+      # in the mono repo. workspaces are an alternative
+      #
+      ##################################################
+      - name: linting
+        run: npm run lint
+      - name: build
+        run: npm run build
