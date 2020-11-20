@@ -1,6 +1,6 @@
 {
   "name": "ls-remote-versions",
-  "version": "1.4.25",
+  "version": "1.4.26",
   "description": "",
   "bin": "bin/index.js",
   "main": "lib/index.js",
@@ -47,7 +47,7 @@
     "jest": "26.4.2",
     "nock": "13.0.4",
     "nodemon": "2.0.6",
-    "standard": "14.3.4"
+    "standard": "16.0.3"
   },
   "standard": {
     "parser": "babel-eslint",
