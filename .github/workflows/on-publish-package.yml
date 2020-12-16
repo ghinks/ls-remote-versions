@@ -1,7 +1,7 @@
 name: on-publish-package
 on:
   push:
-    branches: [ main, 'renovate/**' ]
+    branches: [ main, 'renovate/**', 'feature/**' ]
     pull_request: [ main ]
   workflow_dispatch:
 jobs:
