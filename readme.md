@@ -2,6 +2,8 @@
 
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
+![on-publish-package](https://github.com/ghinks/ls-remote-versions/workflows/on-publish-package/badge.svg)
+
 A tool to list the versions available on your registry by semver range. Great for all those **behind the firewall** as you may not have all
 the versions that the public registry has.
 
