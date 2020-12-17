@@ -1,6 +1,5 @@
 name: on-publish-package
-on: [push, pull_request]
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 jobs:
   build-matrix:
     runs-on: ${{ matrix.os }}
