@@ -1,8 +1,5 @@
 name: on-publish-package
-on:
-  push:
-    branches: [ main, 'renovate/**', 'feature/**' ]
-    pull_request: [ main ]
+on: [push, pull_request]
   workflow_dispatch:
 jobs:
   build-matrix:
