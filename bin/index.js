@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var argv = require('minimist')(process.argv.slice(2))
-var getPackageVersions = require('../lib/index').default
+const argv = require('minimist')(process.argv.slice(2))
+const getPackageVersions = require('../lib/index').default
 
 if (argv._.length === 0) {
   console.log('no args given')

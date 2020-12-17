@@ -15,8 +15,8 @@ describe('Get Package Versions', () => {
   }
   beforeAll(() => {
     getPackageVersion.__Rewire__('fetchVersions', (packageName, registry) => {
-      if (registry === testRegistry) return Promise.resolve({versions: versionsTestRegistry})
-      return Promise.resolve({versions: versionsAltRegistry})
+      if (registry === testRegistry) return Promise.resolve({ versions: versionsTestRegistry })
+      return Promise.resolve({ versions: versionsAltRegistry })
     })
     getPackageVersion.__Rewire__('registryUrl', () => testRegistry)
   })
