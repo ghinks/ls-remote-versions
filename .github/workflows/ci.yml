@@ -1,20 +1,19 @@
-name: ci
-on:
-  push:
-    branches: [ main, 'renovate/**' ]
-    pull_request: [ main ]
-  workflow_dispatch:
+name: on-publish-package
+on: [push, pull_request, workflow_dispatch]
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-matrix:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ windows-latest, ubuntu-latest ]
+        node_version: [14.x]
+    name: Node ${{ matrix.node_version }} - on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Setup node
+        uses: actions/setup-node@v2
         with:
-          node-version: 14
-      - name: npm-install
-        run: npm ci
-      - name: linting
-        run: npm run lint
-      - name: build
-        run: npm run build
+          node-version: ${{ matrix.node_version }}
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
