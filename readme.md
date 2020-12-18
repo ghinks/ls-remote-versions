@@ -7,10 +7,6 @@
 A tool to list the versions available on your registry by semver range. Great for all those **behind the firewall** as you may not have all
 the versions that the public registry has.
 
-<p align="center">
-	<img src="https://cdn.rawgit.com/ghinks/ls-remote-versions/feature/add-gif-lsr4/ls-remote-versions.gif">
-</p>
-
 ## installation
 
 npm install -g ls-remote-versions
