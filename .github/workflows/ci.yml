@@ -14,9 +14,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node_version }}
-      if: ${{ matrix.node_version == "15.4.0" }}
+      - run: echo "detect node 15 "
+        if: ${{ matrix.node_version == '15.4.0' }}
       - run: npm i --no-package-lock
-      if: ${{ matrix.node_version != "15.4.0" }}
-            - run: npm ci
       - run: npm run lint
       - run: npm run test
