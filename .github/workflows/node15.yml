@@ -1,4 +1,4 @@
-name: ci
+name: npm-version-7-via-node-15
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build-matrix:
