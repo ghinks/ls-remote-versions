@@ -16,7 +16,7 @@ jobs:
           node-version: ${{ matrix.node_version }}
       - run: npm i --no-package-lock
         if: ${{ matrix.node_version == '15.4.0' }}
-      - run: npm ci
+      - run: npm i
         if: ${{ matrix.node_version != '15.4.0' }}
       - run: npm run lint
       - run: npm run test
