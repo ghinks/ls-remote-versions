@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
       - run: npm i --no-package-lock
-        if: ${{ startsWith('15', matrix.node_version) }}
+        if: ${{ startsWith(matrix.node_version, '15') }}
       - run: npm run lint
       - run: npm run test
