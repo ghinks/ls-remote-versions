@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        node_version: [15.4.0]
+        node_version: [14.x, 15.4.0]
     name: Node ${{ matrix.node_version }} - on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -14,10 +14,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node_version }}
-      - run: echo "detect node 15 "
-        if: ${{ matrix.node_version == '15.4.0' }}
-      - run: echo "detect node 14 "
-        if: ${{ matrix.node_version == '14.4.0' }}
       - run: npm i --no-package-lock
+        if: ${{ matrix.node_version == '15.4.0' }}
+      - run: npm ci
+        if: ${{ matrix.node_version != '15.4.0' }}
       - run: npm run lint
       - run: npm run test
