@@ -2,6 +2,7 @@ name: npm-version-7-via-node-15
 on:
   schedule:
     - cron: '30, 6, 23, *, *'
+  workflow_dispatch:
 jobs:
   build-matrix:
     runs-on: ${{ matrix.os }}
