@@ -55,6 +55,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
+          registry-url: https://registry.npmjs.org
+          scope: '@gvhinks'
       - name: npm init
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
