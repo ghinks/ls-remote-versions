@@ -1,6 +1,6 @@
 {
   "name": "@gvhinks/ls-remote-versions",
-  "version": "0.0.1-development",
+  "version": "0.0.0-development",
   "private": false,
   "description": "",
   "bin": {

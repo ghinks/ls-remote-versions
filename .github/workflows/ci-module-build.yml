@@ -32,8 +32,7 @@ jobs:
       ##  |_| |_| .__/|_| |_| |_|
       ##        |_|
       ###################################################
-      - name: npm-publish
+      - name: npm-publish-dry-run
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
+        run: npm publish --dry-run
