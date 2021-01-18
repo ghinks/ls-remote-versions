@@ -57,7 +57,7 @@ jobs:
           node-version: 14.x
           registry-url: https://registry.npmjs.org
           scope: '@gvhinks'
-      - name: npm init
+      - name: test-globally-installed
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
