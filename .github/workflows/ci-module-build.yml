@@ -36,6 +36,22 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --dry-run
+      ###################################################
+      ##    __                        ___.          .__  .__
+      ## _/  |______ _______         \_ |__ _____  |  | |  |
+      ## \   __\__  \\_  __ \  ______ | __ \\__  \ |  | |  |
+      ## |  |  / __ \|  | \/ /_____/ | \_\ \/ __ \|  |_|  |__
+      ## |__| (____  /__|            |___  (____  /____/____/
+      ##           \/                    \/     \/
+      ###################################################
+      - name: create-local-npm-tar-ball
+        run: npm pack
+      - name: create-tar-ball-artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ls-remote-versions-ball
+          path: gvhinks-ls-remote-versions-0.0.0-development.tgz
+
   ##################################################
   #    _____           _                                   _     _
   #   |_   _|         | |                                 | |   (_)
@@ -57,9 +73,13 @@ jobs:
           node-version: 14.x
           registry-url: https://registry.npmjs.org
           scope: '@gvhinks'
+      - name: download-tarball
+        uses: actions/download-artifact@v2
+        with:
+          name: ls-remote-versions-tarball
       - name: test-globally-installed
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm install -g @gvhinks/ls-remote-versions@0.0.0-development
+          npm install -g gvhinks-ls-remote-versions-0.0.0-development.tgz
           ls-remote-versions fastify
