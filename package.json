@@ -1,6 +1,6 @@
 {
-  "name": "ls-remote-versions",
-  "version": "1.4.31",
+  "name": "@gvhinks/ls-remote-versions",
+  "version": "0.0.0-development",
   "description": "",
   "bin": {
     "ls-remote-versions": "bin/index.js"
