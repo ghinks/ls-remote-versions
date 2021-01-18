@@ -62,4 +62,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm init --yes
-          npm install @gvhinks/ls-remote-versions@0.0.0-development
+          npm install -g @gvhinks/ls-remote-versions@0.0.0-development
