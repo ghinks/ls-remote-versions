@@ -1,5 +1,7 @@
 name: ci
-on: [push, pull_request, workflow_dispatch]
+on:
+  pull_request:
+    branches: ['renovate/**']
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -71,15 +73,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14.x
-          registry-url: https://registry.npmjs.org
-          scope: '@gvhinks'
       - name: download-tarball
         uses: actions/download-artifact@v2
         with:
           name: ls-remote-versions-tar-ball
       - name: test-globally-installed
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm install -g gvhinks-ls-remote-versions-0.0.0-development.tgz
           ls-remote-versions fastify
