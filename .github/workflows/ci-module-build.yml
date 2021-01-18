@@ -19,10 +19,11 @@ jobs:
       #  |_.__/ \__,_|_|_|\__,_|
       ##################################################
       - name: build
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test
-      - run: npm run build
+        run: |
+          npm ci
+          npm run lint
+          npm run test
+          npm run build
 
       ###################################################
       ##   _ __  _ __  _ __ ___
