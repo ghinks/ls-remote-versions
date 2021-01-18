@@ -49,7 +49,7 @@ jobs:
       - name: create-tar-ball-artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ls-remote-versions-ball
+          name: ls-remote-versions-tar-ball
           path: gvhinks-ls-remote-versions-0.0.0-development.tgz
 
   ##################################################
@@ -76,7 +76,7 @@ jobs:
       - name: download-tarball
         uses: actions/download-artifact@v2
         with:
-          name: ls-remote-versions-tarball
+          name: ls-remote-versions-tar-ball
       - name: test-globally-installed
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
