@@ -2,6 +2,7 @@ name: renovate
 on:
   pull_request:
     branches: ['renovate/**']
+  workflow_dispatch:
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -12,7 +13,6 @@ jobs:
         with:
           node-version: 14.x
           registry-url: https://registry.npmjs.org
-          scope: '@gvhinks'
       ##################################################
       #   _           _ _     _
       #  | |__  _   _(_) | __| |
@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ls-remote-versions-tar-ball
-          path: gvhinks-ls-remote-versions-0.0.0-development.tgz
+          path: ls-remote-versions-0.0.0-development.tgz
 
   ##################################################
   #    _____           _                                   _     _
@@ -79,5 +79,5 @@ jobs:
           name: ls-remote-versions-tar-ball
       - name: test-globally-installed
         run: |
-          npm install -g gvhinks-ls-remote-versions-0.0.0-development.tgz
+          npm install -g ls-remote-versions-0.0.0-development.tgz
           ls-remote-versions fastify
