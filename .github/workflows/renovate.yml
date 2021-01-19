@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ls-remote-versions-tar-ball
-          path: "ls-remote-versions-${{ steps.extract_version.outputs.version }}-development.tgz"
+          path: "ls-remote-versions-${{ steps.extract_version.outputs.version }}.tgz"
 
   ##################################################
   #    _____           _                                   _     _
@@ -89,5 +89,5 @@ jobs:
           name: ls-remote-versions-tar-ball
       - name: test-globally-installed
         run: |
-          npm install -g "ls-remote-versions-${{ steps.extract_version.outputs.version }}-development.tgz"
+          npm install -g "ls-remote-versions-${{ steps.extract_version.outputs.version }}.tgz"
           ls-remote-versions fastify
