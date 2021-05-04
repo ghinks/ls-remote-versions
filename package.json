@@ -2,6 +2,7 @@
   "name": "ls-remote-versions",
   "version": "1.4.37",
   "description": "",
+  "type": "module",
   "bin": {
     "ls-remote-versions": "bin/index.js"
   },
