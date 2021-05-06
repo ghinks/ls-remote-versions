@@ -1,4 +1,10 @@
+import 'regenerator-runtime/runtime.js'
+import fetchVersions from './fetchVersions/index'
+import registryUrl from 'registry-url'
 import getPackageVersion from './index'
+
+jest.mock('./fetchVersions/index')
+jest.mock('registry-url')
 
 describe('Get Package Versions', () => {
   const testRegistry = 'http://registry.npmjs.org'
@@ -14,14 +20,21 @@ describe('Get Package Versions', () => {
     '5.0.0': {}
   }
   beforeAll(() => {
+    fetchVersions.mockImplementation((packageName, registry) => {
+      if (registry === testRegistry) return Promise.resolve({ versions: versionsTestRegistry })
+      return Promise.resolve({ versions: versionsAltRegistry })
+    })
+    registryUrl.mockImplementation(() => testRegistry)
+    /*
     getPackageVersion.__Rewire__('fetchVersions', (packageName, registry) => {
       if (registry === testRegistry) return Promise.resolve({ versions: versionsTestRegistry })
       return Promise.resolve({ versions: versionsAltRegistry })
     })
     getPackageVersion.__Rewire__('registryUrl', () => testRegistry)
+     */
   })
 
-  afterAll(() => __rewire_reset_all__())
+  afterAll(() => jest.clearAllMocks())
 
   test('Expect to get three versions', async () => {
     expect.assertions(1)

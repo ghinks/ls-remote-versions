@@ -1,0 +1,11 @@
+{
+  "coverageDirectory": "coverage",
+  "coverageReporters": [
+    "json",
+    "lcov",
+    "text",
+    "html"
+  ],
+  "testURL": "http://localhost",
+  "transformIgnorePatterns": []
+}

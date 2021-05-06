@@ -1,8 +1,12 @@
-import action, { __RewireAPI__ as actionRewireAPI } from './index'
+import 'regenerator-runtime/runtime.js'
+import npa from 'npm-package-arg'
+import action from './index'
 import nock from 'nock'
 import util from 'util'
 import fs from 'fs'
 import path from 'path'
+
+jest.mock('npm-package-arg')
 
 const pRead = util.promisify(fs.readFile)
 
@@ -17,21 +21,17 @@ describe('fetch versions', () => {
     mockData = JSON.parse(testJsonStr)
   })
 
-  const mockNpa = () => ({
-    escapedName: testModule
-  })
-
   beforeEach(() => {
     httpMock = nock(/.*/)
       .get(/.*/)
       .reply(200, mockData)
-
-    actionRewireAPI.__Rewire__('npa', mockNpa)
+    npa.mockReturnValue({
+      escapedName: testModule
+    })
   })
 
   afterEach(() => {
     nock.cleanAll()
-    __rewire_reset_all__()
   })
 
   test('mocking test', async () => {
