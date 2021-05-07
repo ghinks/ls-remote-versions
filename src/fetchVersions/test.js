@@ -1,11 +1,10 @@
 import 'regenerator-runtime/runtime.js'
-import { jest } from '@jest/globals';
+import { jest } from '@jest/globals'
 import npa from 'npm-package-arg'
 import action from './index'
 import nock from 'nock'
 import util from 'util'
 import fs from 'fs'
-import path from 'path'
 jest.mock('npm-package-arg')
 
 const pRead = util.promisify(fs.readFile)
@@ -17,7 +16,7 @@ describe('fetch versions', () => {
   let mockData
 
   beforeAll(async () => {
-    const testJsonStr = await pRead(new URL(`./data/bluebird.json`, import.meta.url), 'utf8')
+    const testJsonStr = await pRead(new URL('./data/bluebird.json', import.meta.url), 'utf8')
     mockData = JSON.parse(testJsonStr)
   })
 

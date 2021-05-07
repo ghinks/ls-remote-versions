@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-/*
-const argv = require('minimist')(process.argv.slice(2))
-const getPackageVersions = require('../lib/index').default
-*/
+
 import minimist from 'minimist'
 const argv = minimist(process.argv.slice(2))
 import getPackageVersions from '../lib/index.js'
