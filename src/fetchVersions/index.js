@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime.js";
 import fetch from 'isomorphic-fetch'
 import npa from 'npm-package-arg'
 
