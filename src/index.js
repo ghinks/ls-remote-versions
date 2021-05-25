@@ -1,8 +1,8 @@
 import registryUrl from 'registry-url'
-import fetchVersions from './fetchVersions'
-import parseVersions from './parseVersions'
+import fetchVersions from './fetchVersions/index.js'
+import parseVersions from './parseVersions/index.js'
 import semver from 'semver'
-import { intersection } from 'lodash'
+import lodash from 'lodash'
 
 const matchVersion = (versions, range) => {
   const matches = versions.reduce((acc, curr) => {
@@ -30,7 +30,7 @@ const getPackageVersions = async (module, range, alternateRegistry) => {
     }
   }
   const altRegVers = await getVersions(module, range, alternateRegistry)
-  const inBoth = intersection(mainRegVers, altRegVers)
+  const inBoth = lodash.intersection(mainRegVers, altRegVers)
   const mainOnly = mainRegVers.reduce((acc, cur) => {
     if (!inBoth.includes(cur)) acc.push(cur)
     return acc

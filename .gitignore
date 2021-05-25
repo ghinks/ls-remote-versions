@@ -64,3 +64,4 @@ typings/
 
 .idea
 
+lib/**/test.js

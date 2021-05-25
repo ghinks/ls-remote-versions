@@ -81,7 +81,7 @@ In this case a local registry hosted using [verdaccio](https://www.npmjs.com/pac
 
 ## features
 
-- tested on node 4 onwards
+- tested on node 14 onwards
 - alternative to npm view <package-name> versions which does not search
 - great for corporate use behind the firewall
 - takes semver range as a second arg to enable registry searches

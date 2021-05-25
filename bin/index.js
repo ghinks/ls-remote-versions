@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const argv = require('minimist')(process.argv.slice(2))
-const getPackageVersions = require('../lib/index').default
-
+import minimist from 'minimist'
+const argv = minimist(process.argv.slice(2))
+import getPackageVersions from '../src/index.js'
 if (argv._.length === 0) {
   console.log('no args given')
   console.log('example express')
