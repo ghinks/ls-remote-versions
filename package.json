@@ -8,14 +8,13 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib; npx babel src --out-dir lib --ignore \"src/**/test.js\" ",
     "watch": "babel --watch src --out-dir lib --ignore test.js",
     "lint": "standard --env jest src/**/*.js",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest src/**/test.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest src/**/test.js src/test.js",
     "coverage": "jest --coverage src/**/test.js"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=16.0.0"
   },
   "repository": {
     "type": "git",
@@ -30,8 +29,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/preset-env": "^7.14.1",
-    "D": "^1.0.0",
     "isomorphic-fetch": "^3.0.0",
     "lodash": ">=4.17.21",
     "minimist": "^1.2.0",
@@ -40,21 +37,19 @@
     "semver": "7.3.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.14.0",
-    "@babel/eslint-parser": "^7.13.14",
     "cross-env": "^7.0.3",
     "eslint": "7.24.0",
     "jest": "^26.6.3",
     "nock": "13.0.11",
     "nodemon": "2.0.7",
-    "regenerator-runtime": "^0.13.7",
     "standard": "16.0.3"
   },
   "standard": {
-    "parser": "@babel/eslint-parser",
     "env": {
       "jest": true
     }
+  },
+  "jest": {
+    "transform": {}
   }
 }

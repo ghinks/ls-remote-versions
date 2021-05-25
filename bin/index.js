@@ -2,7 +2,7 @@
 
 import minimist from 'minimist'
 const argv = minimist(process.argv.slice(2))
-import getPackageVersions from '../lib/index.js'
+import getPackageVersions from '../src/index.js'
 if (argv._.length === 0) {
   console.log('no args given')
   console.log('example express')

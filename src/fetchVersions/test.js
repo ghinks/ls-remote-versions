@@ -1,4 +1,3 @@
-import 'regenerator-runtime/runtime.js'
 import action from './index'
 import nock from 'nock'
 import util from 'util'
