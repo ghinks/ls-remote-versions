@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals'
 import 'regenerator-runtime/runtime.js'
 import fetchVersions from './fetchVersions/index'
 import registryUrl from 'registry-url'
