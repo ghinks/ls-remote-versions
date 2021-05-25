@@ -1,6 +1,4 @@
 import 'regenerator-runtime/runtime.js'
-import { jest } from '@jest/globals'
-import npa from 'npm-package-arg'
 import action from './index'
 import nock from 'nock'
 import util from 'util'
