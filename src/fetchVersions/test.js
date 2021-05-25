@@ -5,7 +5,6 @@ import action from './index'
 import nock from 'nock'
 import util from 'util'
 import fs from 'fs'
-jest.mock('npm-package-arg')
 
 const pRead = util.promisify(fs.readFile)
 
@@ -19,14 +18,10 @@ describe('fetch versions', () => {
     const testJsonStr = await pRead(new URL('./data/bluebird.json', import.meta.url), 'utf8')
     mockData = JSON.parse(testJsonStr)
   })
-
   beforeEach(() => {
     httpMock = nock(/.*/)
       .get(/.*/)
       .reply(200, mockData)
-    npa.mockImplementation(() => {
-      escapedName: testModule
-    })
   })
 
   afterEach(() => {
