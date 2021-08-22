@@ -55,10 +55,11 @@ will list all of the versions of express in your registry that match the semver 
 This may be used as part of a program
 
 ```
-const ls = require('ls-remote-versions').default;
+import ls from "ls-remote-versions/src/index.js";
 
 ls('debug', '2').then(result => console.log(result));
 ```
+Note the importing code type is specified as a module. 
 
 ### Advanced usage to diff registries
 

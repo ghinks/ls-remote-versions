@@ -1,12 +1,12 @@
 {
   "name": "ls-remote-versions",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "",
   "type": "module",
   "bin": {
     "ls-remote-versions": "bin/index.js"
   },
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "watch": "babel --watch src --out-dir lib --ignore test.js",
     "lint": "standard --env jest src/**/*.js",
