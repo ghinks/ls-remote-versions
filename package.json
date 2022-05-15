@@ -1,6 +1,6 @@
 {
   "name": "ls-remote-versions",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "",
   "type": "module",
   "bin": {
@@ -41,7 +41,7 @@
     "eslint": "7.32.0",
     "jest": "27.0.6",
     "nock": "13.1.4",
-    "nodemon": "2.0.12",
+    "nodemon": "2.0.16",
     "standard": "16.0.3"
   },
   "standard": {
