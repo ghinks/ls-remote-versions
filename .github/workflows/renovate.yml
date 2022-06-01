@@ -55,7 +55,7 @@ jobs:
       - name: create-local-npm-tar-ball
         run: npm pack
       - name: create-tar-ball-artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ls-remote-versions-tar-ball
           path: "ls-remote-versions-${{ steps.extract_version.outputs.version }}.tgz"
