@@ -1,6 +1,6 @@
 {
   "name": "ls-remote-versions",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "",
   "type": "module",
   "bin": {
@@ -34,7 +34,7 @@
     "minimist": "^1.2.0",
     "npm-package-arg": "^9.0.0",
     "registry-url": "^6.0.0",
-    "semver": "7.3.5"
+    "semver": "7.5.3"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
